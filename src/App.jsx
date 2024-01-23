@@ -2,10 +2,10 @@ import Test from './Test';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/NavBar';
 import Parallax from './components/parallax/Parallax';
-import './app.scss';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
+import './app.scss';
 
 const App = () => {
 

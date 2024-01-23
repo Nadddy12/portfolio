@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .portfolio {
     position: relative;
 
@@ -9,6 +11,16 @@
         text-align: center;
         color: gold;
         font-size: 32px; 
+
+        @include mobile {
+            padding-top: 20px;
+            font-size: 24px;
+        }
+
+        @include tablet {
+            padding-top: 20px;
+            font-size: 24px;
+        }
 
         .progressBar {
             height: 10px;
@@ -33,14 +45,45 @@
             justify-content: center;
             gap: 50px;
 
+            @include mobile {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            @include tablet {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             .imageContainer {
                 flex: 1;
                 height: 50%;
+
+                @include mobile {
+                    margin-top: 50px;
+                    width: 100%;
+                    max-height: 300px;
+                }
+
+                @include tablet {
+                    margin-top: 50px;
+                    width: 100%;
+                    max-height: 300px;
+                }
 
                 img {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    border-radius: 10px;
+
+                    @include mobile {
+                        object-fit: contain;
+                    }
+
+                    @include tablet {
+                        object-fit: contain;
+                    }
                 }
             }
 
@@ -50,14 +93,40 @@
                 flex-direction: column;
                 gap: 30px;
 
+                @include mobile {
+                    transform: none !important;
+                    padding: 10px;
+                    align-items: center;
+                    text-align: center;
+                    gap: 10px;
+                }
+
+                @include tablet {
+                    transform: none !important;
+                    padding: 10px;
+                    align-items: center;
+                    text-align: center;
+                    gap: 10px;
+                }
+
                 h3 {
                     font-size: 60px;
                     font-family: "Khand", sans-serif;
+
+                    @include mobile {
+                        font-size: 36px;
+                        padding: 10px;
+                    }
                 }
 
                 p {
                     font-size: 20px;
                     font-family: "Khand", sans-serif;
+
+                    @include mobile {
+                        font-size: 18px;
+                        padding: 10px;
+                    }
                 }
 
                 .demo {
@@ -70,6 +139,10 @@
                     padding: 10px;
                     width: 200px;
                     cursor: pointer;
+
+                    @include mobile {
+                        padding: 10px;
+                    }
                 }
 
                 .github {
@@ -83,6 +156,10 @@
                     padding: 10px;
                     width: 200px;
                     cursor: pointer;
+
+                    @include mobile {
+                        padding: 10px;
+                    }
                 }
 
                 .disabled-link {
@@ -96,6 +173,10 @@
                     padding: 10px;
                     width: 200px;
                     cursor: not-allowed;
+
+                    @include mobile {
+                        padding: 10px;
+                    }
                 }
             }
         }

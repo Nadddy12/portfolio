@@ -1,7 +1,7 @@
 import { FaFacebook , FaYoutube , FaLinkedin , FaGithub} from "react-icons/fa";
 import {motion} from "framer-motion";
-import "./navbar.scss"
 import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss"
 
 const Navbar = () => {
     return(

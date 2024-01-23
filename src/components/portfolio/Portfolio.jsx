@@ -15,7 +15,7 @@ const items = [
         id:2,
         title:"Wiki et Blog de jeu Elden Ring",
         img:"/elden.png",
-        desc:"Un projet de fin d'études comprenant une section administrateur avec 6 fonctionnalités CRUD pour ajouter des blogs, des guides, des équipements et des sorts, ainsi qu'une section permettant aux utilisateurs normaux d'ajouter et de tester les états de leurs personnages (simulateur de statistiques). Les administrateurs peuvent promouvoir des personnes pour devenir des modérateurs. Réalisé avec React, serveur Node.js, MongoDB",
+        desc:"Un projet de fin d'études comprenant une section administrateur avec 6 fonctionnalités CRUD pour ajouter des blogs, des guides, des équipements et des sorts, ainsi qu'une section permettant aux utilisateurs normaux d'ajouter et de tester les états de leurs personnages (simulateur de statistiques) et laissez des commentaires sur les articles. Les administrateurs peuvent promouvoir des personnes pour devenir des modérateurs. Réalisé avec React, serveur Node.js, MongoDB",
         github:"https://github.com/Nadddy12/Elden-ring-wiki-personal-project-",
         demo:"none"
     },
