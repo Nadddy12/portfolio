@@ -1,4 +1,3 @@
-import Test from './Test';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/NavBar';
 import Parallax from './components/parallax/Parallax';
