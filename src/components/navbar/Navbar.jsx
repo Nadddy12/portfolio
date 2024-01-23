@@ -16,10 +16,10 @@ const Navbar = () => {
                     Fakhir Dev
                 </motion.span>
                 <div className="social">
-                    <a href=""><FaFacebook className="social-icons"/></a>
-                    <a href=""><FaYoutube className="social-icons"/></a>
-                    <a href=""><FaLinkedin className="social-icons"/></a>
-                    <a href=""><FaGithub className="social-icons"/></a>
+                    <a href="https://www.facebook.com/abdul.fakhri.146/"><FaFacebook className="social-icons"/></a>
+                    <a href="https://www.youtube.com/@madnedgaming3867"><FaYoutube className="social-icons"/></a>
+                    <a href="https://www.linkedin.com/in/abdulrahman-fakhri-07334825a/"><FaLinkedin className="social-icons"/></a>
+                    <a href="https://github.com/Nadddy12"><FaGithub className="social-icons"/></a>
                 </div>
             </div>
         </div>
