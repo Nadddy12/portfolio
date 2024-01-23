@@ -33,7 +33,6 @@ const Links = () => {
         "Services",
         "Portfolio",
         "Contacte",
-        "Sur-moi",
     ]
 
     return(
