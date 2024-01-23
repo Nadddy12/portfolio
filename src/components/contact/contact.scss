@@ -37,6 +37,7 @@
             stroke: gold;
             position: absolute;
             margin: auto;
+            z-index: -1;
         }
 
         form {
@@ -50,6 +51,7 @@
                 background-color: transparent;
                 border: 1px solid white;
                 border-radius: 5px;
+                color: white;
             }
 
             button {

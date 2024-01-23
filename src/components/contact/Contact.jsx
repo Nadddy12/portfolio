@@ -1,6 +1,7 @@
 import { motion , useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import "./contact.scss";
-import { useRef } from 'react';
 
 const varinats = {
     initial: {
@@ -20,8 +21,25 @@ const varinats = {
 const Contact = () => {
 
     const ref = useRef()
+    const formRef = useRef()
+    const [error , setError] = useState(false); 
+    const [success , setSuccess] = useState(false); 
 
-    const isInView = useInView(ref, {margin: "-100px"})
+    const isInView = useInView(ref, {margin: "-100px"});
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setError(false);
+        setSuccess(false);
+    
+        emailjs.sendForm('service_rx069qg', 'template_wr2eeim', formRef.current, 'o05wBUI_YP2o3ndq4')
+        .then((result) => {
+            setSuccess(true);
+        }, (error) => {
+            setError(true);
+        });
+    };
+    
     return(
         <motion.div
             ref={ref}
@@ -74,15 +92,19 @@ const Contact = () => {
                         />
                     </svg>
                 </motion.div>
-                <motion.form 
+                <motion.form
+                    ref={formRef}
+                    onSubmit={sendEmail}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 3, duration: 1 }}
                 >
-                    <input type="text" placeholder="Nom"/>
-                    <input type="email" placeholder="Email"/>
-                    <textarea rows={8} placeholder="Message" />
+                    <input type="text" placeholder="Nom" name="name"/>
+                    <input type="email" placeholder="Email" name="email"/>
+                    <textarea rows={8} placeholder="Message" name="message"/>
                     <button>Soumettre</button>
+                    {error && "quelque chose s'est mal passé, le message n'a pas été envoyé"}
+                    {success && "message envoyé avec succès"}
                 </motion.form>
             </div>
         </motion.div>
