@@ -99,12 +99,12 @@ const Contact = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 3, duration: 1 }}
                 >
-                    <input type="text" placeholder="Nom" name="name"/>
-                    <input type="email" placeholder="Email" name="email"/>
-                    <textarea rows={8} placeholder="Message" name="message"/>
+                    <input type="text" placeholder="Nom" name="name" required/>
+                    <input type="email" placeholder="Email" name="email" required/>
+                    <textarea rows={8} placeholder="Message" name="message" required/>
                     <button>Soumettre</button>
-                    {error && "quelque chose s'est mal passé, le message n'a pas été envoyé"}
-                    {success && "message envoyé avec succès"}
+                    {error && <div style={{color: "red"}}>quelque chose s'est mal passé, le message n'a pas été envoyé</div>}
+                    {success && <div style={{color: "green"}}>message envoyé avec succès</div>}
                 </motion.form>
             </div>
         </motion.div>
