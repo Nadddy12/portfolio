@@ -16,23 +16,31 @@
         align-items: center;
         gap: 20px;
 
-        @include mobile {
-            align-self: center;
-            text-align: center;
-            flex-direction: column;
-        }
-
         @include tablet {
             align-self: center;
             text-align: center;
             flex-direction: column;
         }
 
+        @include mobile {
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+
         p {
             font-weight: 200;
             font-size: 21px;
             font-family: "Khand", sans-serif;
             text-align: right;
+
+            @include tablet {
+                margin-top: 20px;
+                align-self: center;
+                text-align: center;
+                font-size: 21px;
+            }
 
             @include mobile {
                 margin-top: 20px;
@@ -41,12 +49,6 @@
                 font-size: 15px;
             }
 
-            @include tablet {
-                margin-top: 20px;
-                align-self: center;
-                text-align: center;
-                font-size: 21px;
-            }
         }
 
         hr {
@@ -62,18 +64,25 @@
         flex-direction: column;
         align-items: center;
 
+        @include tablet {
+            width: 100%;
+        }
+
         @include mobile {
             width: 100%;
         }
 
-        @include tablet {
-            width: 100%;
-        }
 
         .title {
             display: flex;
             align-items: center;
             gap: 50px;
+
+            @include tablet {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
 
             @include mobile {
                 flex-direction: column;
@@ -81,11 +90,6 @@
                 gap: 20px;
             }
 
-            @include tablet {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
 
             img {
                 width: 300px;
@@ -128,19 +132,21 @@
     .listContainer {
         flex: 2;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 50px;
+
+        @include tablet {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
         @include mobile {
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        @include tablet {
-            flex-wrap: wrap;
-            gap: 10px;
-        }
 
         img {
             width: 200px;
@@ -148,15 +154,21 @@
             object-fit: contain;
             border-radius: 25px;
 
-            @include mobile {
-                width: 75px;
-                height: 75px;
-            }
-
             @include tablet {
                 width: 150x;
                 height: 150px;
             }
+
+            @include mobile {
+                width: 100px;
+                height: 100px;
+            }
+
+            @include mobileS {
+                width: 80px;
+                height: 80px;
+            }
+
         }
     }
 }

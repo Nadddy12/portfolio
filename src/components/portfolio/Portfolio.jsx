@@ -58,10 +58,10 @@ const Single = ({item}) => {
                         )}
                         {item.github !== "none" ? (
                             <motion.a href={item.github} whileHover={{scale:1.05}} whileTap={{scale:0.9}} className="github">
-                                Code sur github
+                                Github
                             </motion.a>
                         ) : (
-                            <span className="disabled-link">Code sur github</span>
+                            <span className="disabled-link">Github</span>
                         )}
                     </motion.div>
                 </div>
@@ -82,7 +82,7 @@ const Portfolio = () => {
 
     const scaleX = useSpring(scrollYProgress, {
         stiffness:100,
-        damping:40,
+        damping:30,
     });
 
     return(

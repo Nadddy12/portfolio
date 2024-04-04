@@ -48,13 +48,13 @@ const Contact = () => {
             initial="initial" 
             whileInView="animate">
             <motion.div className="textContainer" variants={varinats}>
-                <motion.h2 variants={varinats}>Bien à l'écoute, prêt à collaborer. Contactez-moi!</motion.h2>
+                <motion.h2 variants={varinats}>Engagement rapide, pour des projets passionnants. Hâte de vous entendre!</motion.h2>
                 <motion.div className="item" variants={varinats}>
-                    <h3>Mail</h3>
+                    <h3>Email</h3>
                     <span>abd.nad12@gmail.com</span>
                 </motion.div>
                 <motion.div className="item" variants={varinats}>
-                    <h3>Adress</h3>
+                    <h3>Adresse</h3>
                     <span>49400, Saumur</span>
                 </motion.div>
                 <motion.div className="item" variants={varinats}>
